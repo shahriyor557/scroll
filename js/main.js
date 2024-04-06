@@ -4,7 +4,12 @@ let madal = document.querySelector(".madal")
 let courses = document.querySelector(".courses")
 let sec_madal = document.querySelector(".sec_madal")
 let partners = document.querySelector(".partners")
-console.log(partners.offsetTop);
+let teacher = document.querySelector(".teacher")
+teacher.addEventListener('click', () => {
+    window.scrollTo(0, 825);
+    
+})
+// console.log(partners.offsetTop);
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > acadmy.offsetTop + 300 && window.scrollY < acadmy.offsetTop + acadmy.offsetHeight) {
