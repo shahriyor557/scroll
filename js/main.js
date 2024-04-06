@@ -7,7 +7,7 @@ let partners = document.querySelector(".partners")
 console.log(partners.offsetTop);
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > acadmy.offsetTop +300 && window.scrollY < acadmy.offsetTop + acadmy.offsetHeight) {
+    if (window.scrollY > acadmy.offsetTop + 300 && window.scrollY < acadmy.offsetTop + acadmy.offsetHeight) {
         button.classList.add("active")
     }
     else {
