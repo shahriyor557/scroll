@@ -2,25 +2,33 @@ let button = document.querySelector('button')
 let acadmy = document.querySelector(".acadmy")
 let madal = document.querySelector(".madal")
 let courses = document.querySelector(".courses")
+let sec_madal = document.querySelector(".sec_madal")
+let partners = document.querySelector(".partners")
+console.log(partners.offsetTop);
+
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 400 && window.scrollY < 800) {
+    if (window.scrollY > acadmy.offsetTop +300 && window.scrollY < acadmy.offsetTop + acadmy.offsetHeight) {
         button.classList.add("active")
-    }
-    else if (window.scrollY > 1651 && window.screenY < 2284) {
-        madal.classList.add("madal_act")
     }
     else {
         button.classList.remove("active")
+    }
+
+    if (window.scrollY > courses.offsetTop && window.scrollY < courses.offsetTop + courses.offsetHeight) {
+        madal.classList.add("madal_act")
+    }
+
+    else {
         madal.classList.remove("madal_act")
     }
-    // console.log(window.scrollY);
-
+    if (window.scrollY > partners.offsetTop && window.scrollY < partners.offsetTop + partners.offsetHeight) {
+        sec_madal.classList.add("madal_act")
+    }
+    else {
+        sec_madal.classList.remove("madal_act")
+    }
 });
 
 button.addEventListener('click', () => {
-    // console.log(acadmy.scrollTop);
     window.scrollTo(0, 0);
-    console.log(courses.scrollTop);
-
-
 })
